@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HustleHub — Find or post a student side-hustle</title>
+  <meta name="description" content="HustleHub is a campus noticeboard, online, for students who offer and need side-hustle services.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="csslab.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">Hustle<span>Hub</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Marketplace</a>
+        <a href="register.html">Post a Hustle</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="welcome-banner" class="welcome-banner" hidden></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">Strathmore &amp; beyond</span>
+          <h1>Every campus has a hustle.<br>Find yours, or hire one.</h1>
+          <p>HustleHub is the noticeboard your hostel corridor never had: a place where students post the skills
+            they sell — tutoring, design, baking, braiding, errands — and where other students come looking for
+            exactly that, without the guesswork of a WhatsApp group chat.</p>
+          <div class="button-row">
+            <a href="services.html" class="btn btn-primary">Browse the marketplace</a>
+            <a href="register.html" class="btn btn-outline">Post your hustle</a>
+          </div>
+        </div>
+        <div class="hero-pins">
+          <div class="pin-stack">
+            <div class="pin-card">
+              <h3>Maths &amp; Stats Tutoring</h3>
+              <p><small>Brian O. &middot; 4th Year &middot; from <strong>KES 500</strong>/hr</small></p>
+            </div>
+            <div class="pin-card">
+              <h3>Custom Cakes &amp; Cupcakes</h3>
+              <p><small>Amina W. &middot; 2nd Year &middot; orders from <strong>KES 800</strong></small></p>
+            </div>
+            <div class="pin-card">
+              <h3>Event Photography</h3>
+              <p><small>Kevin M. &middot; 3rd Year &middot; from <strong>KES 3,000</strong>/event</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The process</span>
+          <h2>How HustleHub works</h2>
+          <p>Three steps, no middlemen, no commission taken from your hustle.</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Create a listing</h3>
+            <p>Post what you offer, your rate, and where you're reachable on campus.</p>
+          </li>
+          <li>
+            <h3>Get discovered</h3>
+            <p>Students search the marketplace by category when they need your service.</p>
+          </li>
+          <li>
+            <h3>Agree &amp; deliver</h3>
+            <p>Chat directly, agree on terms, and get paid — HustleHub never takes a cut.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">What's on offer</span>
+          <h2>Popular hustle categories</h2>
+        </div>
+        <ul class="category-grid">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0-1 1-2 2-2h9v16H6c-1 0-2 1-2 2V5Z"/><path d="M15 3h3c1 0 2 1 2 2v14c0 1-1 2-2 2h-3"/></svg>
+            Tutoring
+            <button type="button" class="learn-more-btn" data-more="Session rates from KES 500/hr. Most requested for Calculus, Statistics, and Programming units.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21 8 20l11-11-4-4L4 16Z"/><path d="M14 5l4 4"/></svg>
+            Graphic Design
+            <button type="button" class="learn-more-btn" data-more="Posters, logos, and flyers for clubs and small businesses, usually delivered in 2-5 days.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M9 6l1.5-3h3L15 6"/></svg>
+            Photography
+            <button type="button" class="learn-more-btn" data-more="Event and graduation photography with same-week digital delivery of edited photos.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c1.5-3 4-3 5-1s2.5 2 4 0 3.5-2 5 1"/><rect x="3" y="12" width="18" height="7" rx="1"/></svg>
+            Baking
+            <button type="button" class="learn-more-btn" data-more="Custom cakes and cupcake orders, usually 48 hours notice needed.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3c0 3-3 4-3 8a7 7 0 0 0 14 0c0-4-3-5-3-8-1 2-2 2-2 0-1 2-2 2-3 0-1 2-2 2-3 0Z"/></svg>
+            Braiding &amp; Grooming
+            <button type="button" class="learn-more-btn" data-more="Braids, twists, and grooming booked straight from your hostel room, same day.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16l-1.5 12h-13Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+            Laundry &amp; Errands
+            <button type="button" class="learn-more-btn" data-more="Laundry, printing, and errand runs, most completed the same day.">Learn more</button>
+            <p class="category-detail" hidden></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Stats / why HustleHub -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why it works</span>
+          <h2>Built for campus economics</h2>
+        </div>
+        <dl class="stats-list">
+          <div><dt>0%</dt><dd>commission on every hustle booked</dd></div>
+          <div><dt>5&nbsp;min</dt><dd>average time to post a listing</dd></div>
+          <div><dt>6</dt><dd>hustle categories to start browsing</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Testimonial + fact box -->
+    <section>
+      <div class="container hero-inner">
+        <blockquote class="testimonial">
+          I posted my tutoring listing on a Sunday night and had my first two students booked before the
+          Wednesday CAT. No commission, no awkward group chat spam.
+          <cite>— Brian O., 4th Year, Information Systems</cite>
+        </blockquote>
+        <aside class="fact-box">
+          <p><mark>Did you know?</mark> Most successful hustles on campus aren't the biggest ideas — they're
+          the <strong>smallest recurring need</strong> solved consistently, like ironing, printing, or a weekly
+          cake order.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Before you start</span>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <details>
+          <summary>Is it free to post a hustle?</summary>
+          <p>Yes. HustleHub does not charge listing fees or take a commission on what you earn.</p>
+        </details>
+        <details>
+          <summary>Can I list more than one hustle?</summary>
+          <p>Yes, use the registration form to add each service separately so it appears under the right category.</p>
+        </details>
+        <details>
+          <summary>How do buyers contact me?</summary>
+          <p>Your listing shows the contact details you choose to share when you register.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Iframe spotlight -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">This week's spotlight</span>
+          <h2>Featured hustle</h2>
+          <p>Embedded live from our gallery page.</p>
+        </div>
+        <iframe class="spotlight-frame" src="gallery.html" title="Weekly hustle spotlight preview"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>HustleHub</h2>
+        <p>A digital noticeboard connecting Strathmore students who have a skill to sell with students who need it.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Marketplace</a></li>
+          <li><a href="register.html">Post a Hustle</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Strathmore University<br>
+          Ole Sangale Road, Madaraka<br>
+          Nairobi, Kenya<br>
+          <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container"><small>&copy; <time datetime="2026">2026</time> HustleHub. A student project for the Web Development module.</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

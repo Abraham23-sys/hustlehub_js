@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace — HustleHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="csslab.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">Hustle<span>Hub</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Marketplace</a>
+        <a href="register.html">Post a Hustle</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div id="confirmation-toast" class="confirmation-toast" hidden></div>
+
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <span class="eyebrow">Marketplace</span>
+        <h1>Browse what students are hustling this month</h1>
+        <p>Every listing below was posted by a student through the <a href="register.html">registration form</a>.
+          Rates are negotiable unless marked <em>fixed</em>.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Price guide</span>
+          <h2>Category price ranges</h2>
+        </div>
+        <table class="service-table">
+          <caption style="text-align:left; margin-bottom:0.75rem; font-family:var(--font-mono); font-size:0.8rem; color:var(--clay);">
+            All prices in <abbr title="Kenyan Shilling">KES</abbr>. Updated <time datetime="2026-07-01">1 July 2026</time>.
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Category</th>
+              <th scope="col">Typical rate</th>
+              <th scope="col">Turnaround</th>
+              <th scope="col">Active hustlers</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tutoring</td>
+              <td>500 – 1,200 / hr</td>
+              <td>Same week</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td>Graphic Design</td>
+              <td>800 – 4,000 / project</td>
+              <td>2 – 5 days</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>Photography</td>
+              <td>3,000 – 8,000 / event</td>
+              <td>1 – 3 days</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Baking</td>
+              <td>800 – 2,500 / order</td>
+              <td>1 – 2 days</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Braiding &amp; Grooming</td>
+              <td>500 – 1,500 / session</td>
+              <td>Same day</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td>Laundry &amp; Errands</td>
+              <td>200 – 600 / task</td>
+              <td>Same day</td>
+              <td>21</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="4">80 active hustlers this term and counting.</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Featured this week</span>
+          <h2>Hustles worth checking out</h2>
+        </div>
+        <p id="saved-summary" class="saved-summary" hidden></p>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <figure>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5c0-1 1-2 2-2h9v16H6c-1 0-2 1-2 2V5Z"/><path d="M15 3h3c1 0 2 1 2 2v14c0 1-1 2-2 2h-3"/></svg>
+              <figcaption>Tutoring</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="badge">Fixed rate</span>
+              <h3>Calculus &amp; Statistics Crash Course</h3>
+              <p>Group or 1-on-1 sessions ahead of CATs. Past papers included.</p>
+              <p class="price">KES 500 / hr</p>
+              <button type="button" class="btn-save" data-hustle="Calculus &amp; Statistics Crash Course">Save hustle</button>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <figure>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="13" r="8"/><path d="M9 6l1.5-3h3L15 6"/></svg>
+              <figcaption>Photography</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="badge">Negotiable</span>
+              <h3>Graduation &amp; Event Photography</h3>
+              <p>Full-day coverage with same-week digital delivery of edited photos.</p>
+              <p class="price">From KES 3,000</p>
+              <button type="button" class="btn-save" data-hustle="Graduation &amp; Event Photography">Save hustle</button>
+            </div>
+          </article>
+
+          <article class="feature-card">
+            <figure>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c1.5-3 4-3 5-1s2.5 2 4 0 3.5-2 5 1"/><rect x="3" y="12" width="18" height="7" rx="1"/></svg>
+              <figcaption>Baking</figcaption>
+            </figure>
+            <div class="card-body">
+              <span class="badge">Fixed rate</span>
+              <h3>Custom Birthday Cakes</h3>
+              <p>48-hour notice needed. Delivery within campus included.</p>
+              <p class="price">From KES 800</p>
+              <button type="button" class="btn-save" data-hustle="Custom Birthday Cakes">Save hustle</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Not sure where to start?</span>
+          <h2>Post your own hustle in minutes</h2>
+        </div>
+        <p>Have a skill that isn't listed above? <a href="register.html">Register it here</a> and it will appear
+          in the next marketplace update.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>HustleHub</h2>
+        <p>A digital noticeboard connecting Strathmore students who have a skill to sell with students who need it.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Marketplace</a></li>
+          <li><a href="register.html">Post a Hustle</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Strathmore University<br>
+          Ole Sangale Road, Madaraka<br>
+          Nairobi, Kenya<br>
+          <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container"><small>&copy; <time datetime="2026">2026</time> HustleHub. A student project for the Web Development module.</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

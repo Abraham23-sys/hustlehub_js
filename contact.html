@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — HustleHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="csslab.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">Hustle<span>Hub</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Marketplace</a>
+        <a href="register.html">Post a Hustle</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Questions, feedback, or a hustle to suggest?</h1>
+        <p>Reach the HustleHub team directly, or drop by the office listed below.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container contact-grid">
+        <div>
+          <h2>Send a message</h2>
+          <form class="form-card" id="contact-form" action="#" method="post" novalidate>
+            <p id="contact-success" class="form-success" hidden>Thanks — your message looks good and is ready to send.</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="c-name">Name *</label>
+                <input type="text" id="c-name" name="name" required>
+                <span class="error-text" id="err-c-name"></span>
+              </div>
+              <div class="form-field">
+                <label for="c-email">Email *</label>
+                <input type="email" id="c-email" name="email" required>
+                <span class="error-text" id="err-c-email"></span>
+              </div>
+            </div>
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label for="c-subject">Subject</label>
+              <select id="c-subject" name="subject">
+                <option value="general">General enquiry</option>
+                <option value="listing">Help with a listing</option>
+                <option value="report">Report an issue</option>
+                <option value="partnership">Partnership</option>
+              </select>
+            </div>
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label for="c-message">Message *</label>
+              <textarea id="c-message" name="message" required placeholder="Tell us what's on your mind..."></textarea>
+              <span class="error-text" id="err-c-message"></span>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <button type="reset" class="btn-reset">Clear</button>
+            </div>
+          </form>
+        </div>
+
+        <div>
+          <h2>Visit or write to us</h2>
+          <address>
+            <strong>HustleHub Student Desk</strong><br>
+            Student Centre, Strathmore University<br>
+            Ole Sangale Road, Madaraka<br>
+            Nairobi, Kenya<br><br>
+            Email: <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a><br>
+            Phone: <a href="tel:+254700000000">+254 700 000 000</a>
+          </address>
+
+          <p><small>Office hours: Monday – Friday, <time datetime="10:00">10:00</time> – <time datetime="16:00">16:00</time>.</small></p>
+
+          <h3>Find us</h3>
+          <iframe
+            class="spotlight-frame"
+            style="height:200px;"
+            src="https://www.google.com/maps?q=Strathmore+University,+Nairobi&output=embed"
+            title="Map showing Strathmore University location"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+          <h3>Follow HustleHub</h3>
+          <ul class="social-inline">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">X (Twitter)</a></li>
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">WhatsApp Community</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>HustleHub</h2>
+        <p>A digital noticeboard connecting Strathmore students who have a skill to sell with students who need it.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Marketplace</a></li>
+          <li><a href="register.html">Post a Hustle</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Strathmore University<br>
+          Ole Sangale Road, Madaraka<br>
+          Nairobi, Kenya<br>
+          <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container"><small>&copy; <time datetime="2026">2026</time> HustleHub. A student project for the Web Development module.</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

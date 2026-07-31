@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — HustleHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="csslab.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">Hustle<span>Hub</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Marketplace</a>
+        <a href="register.html">Post a Hustle</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <span class="eyebrow">Gallery</span>
+        <h1>Hover a card to flip it</h1>
+        <p>A quick look at the six categories students hustle in most. Hover — or tap on mobile — to see what
+          each one is about. Click a card to mark it as your favourite.</p>
+        <p id="favorite-display" class="favorite-display" hidden></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="gallery-grid">
+
+          <div class="flip-card" data-category="Tutoring" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-tutoring/400/300" alt="Two students studying together with notebooks and a laptop">
+                <h3>Tutoring</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>1-on-1 and group sessions for units students find toughest, from calculus to programming.</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" data-category="Graphic Design" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-design/400/300" alt="Laptop screen showing a graphic design project">
+                <h3>Graphic Design</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>Posters, logos, and event flyers designed for club events and small businesses.</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" data-category="Photography" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-photography/400/300" alt="Camera being used to photograph a campus event">
+                <h3>Photography</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>Graduation shoots, events, and portraits with same-week digital delivery.</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" data-category="Baking" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-baking/400/300" alt="Tray of freshly baked cupcakes">
+                <h3>Baking</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>Custom cakes, cupcakes, and snack boxes for birthdays and campus events.</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" data-category="Braiding &amp; Grooming" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-braiding/400/300" alt="Hair braiding session in progress">
+                <h3>Braiding &amp; Grooming</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>Braids, twists, and grooming services booked straight from your hostel room.</figcaption>
+              </div>
+            </div>
+          </div>
+
+          <div class="flip-card" data-category="Laundry &amp; Errands" tabindex="0" role="button" aria-pressed="false">
+            <div class="flip-card-inner">
+              <figure class="flip-card-front">
+                <img src="https://picsum.photos/seed/hustlehub-laundry/400/300" alt="Basket of neatly folded clean laundry">
+                <h3>Laundry &amp; Errands</h3>
+              </figure>
+              <div class="flip-card-back">
+                <figcaption>Laundry, printing runs, and errands for students too buried in coursework to leave campus.</figcaption>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>HustleHub</h2>
+        <p>A digital noticeboard connecting Strathmore students who have a skill to sell with students who need it.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Marketplace</a></li>
+          <li><a href="register.html">Post a Hustle</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Strathmore University<br>
+          Ole Sangale Road, Madaraka<br>
+          Nairobi, Kenya<br>
+          <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container"><small>&copy; <time datetime="2026">2026</time> HustleHub. A student project for the Web Development module.</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

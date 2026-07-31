@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Hustle — HustleHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="csslab.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a href="index.html" class="logo">Hustle<span>Hub</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Marketplace</a>
+        <a href="register.html" class="active">Post a Hustle</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="container">
+        <span class="eyebrow">Registration</span>
+        <h1>Post your hustle</h1>
+        <p>Fill in the form below to add your service to the marketplace. Fields marked
+          <strong>*</strong> are required.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <form class="form-card" id="registration-form" action="#" method="post" novalidate>
+          <p id="form-success" class="form-success" hidden>Thanks! Your listing details look good and are ready to submit.</p>
+
+          <fieldset>
+            <legend>1. Your details</legend>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="full-name">Full name *</label>
+                <input type="text" id="full-name" name="full-name" placeholder="e.g. Abraham Kimani" required>
+                <span class="error-text" id="err-full-name"></span>
+              </div>
+              <div class="form-field">
+                <label for="reg-number">Registration number *</label>
+                <input type="text" id="reg-number" name="reg-number" placeholder="e.g. 123456" required>
+                <span class="error-text" id="err-reg-number"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="email">Campus email *</label>
+                <input type="email" id="email" name="email" placeholder="you@strathmore.edu" required>
+                <span class="error-text" id="err-email"></span>
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone number *</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9+ ]{10,15}" placeholder="07XX XXX XXX" required>
+                <span class="error-text" id="err-phone"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="year">Year of study</label>
+                <select id="year" name="year">
+                  <optgroup label="Undergraduate">
+                    <option value="1">Year 1</option>
+                    <option value="2">Year 2</option>
+                    <option value="3" selected>Year 3</option>
+                    <option value="4">Year 4</option>
+                  </optgroup>
+                  <optgroup label="Postgraduate">
+                    <option value="masters">Master's</option>
+                  </optgroup>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. About your hustle</legend>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="hustle-title">Listing title *</label>
+                <input type="text" id="hustle-title" name="hustle-title" placeholder="e.g. Weekend Cake Orders" required>
+                <span class="error-text" id="err-hustle-title"></span>
+              </div>
+              <div class="form-field">
+                <label for="category">Category *</label>
+                <select id="category" name="category" required>
+                  <option value="" disabled selected>Choose a category</option>
+                  <option value="tutoring">Tutoring</option>
+                  <option value="design">Graphic Design</option>
+                  <option value="photography">Photography</option>
+                  <option value="baking">Baking</option>
+                  <option value="grooming">Braiding &amp; Grooming</option>
+                  <option value="errands">Laundry &amp; Errands</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="error-text" id="err-category"></span>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label for="description">Short description *</label>
+              <textarea id="description" name="description" placeholder="Describe what you offer, turnaround time, and anything buyers should know." required></textarea>
+              <span class="error-text" id="err-description"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="rate">Starting rate (KES) *</label>
+                <input type="number" id="rate" name="rate" min="0" step="50" placeholder="500" required>
+                <span class="error-text" id="err-rate"></span>
+              </div>
+              <div class="form-field">
+                <label for="response-time">Typical response time: <output id="response-output">Same day</output></label>
+                <input type="range" id="response-time" name="response-time" min="1" max="4" value="1"
+                  oninput="response-output.value = ['Same day','1-2 days','3-5 days','1 week+'][this.value-1]">
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label>Pricing type</label>
+              <div class="radio-row">
+                <label><input type="radio" name="pricing-type" value="fixed" checked> Fixed rate</label>
+                <label><input type="radio" name="pricing-type" value="negotiable"> Negotiable</label>
+                <label><input type="radio" name="pricing-type" value="quote"> Quote on request</label>
+              </div>
+            </div>
+
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label>Available on</label>
+              <div class="checkbox-row">
+                <label><input type="checkbox" name="days" value="weekdays" checked> Weekdays</label>
+                <label><input type="checkbox" name="days" value="weekends" checked> Weekends</label>
+                <label><input type="checkbox" name="days" value="evenings"> Evenings only</label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="sample">Upload a sample photo <small>(optional)</small></label>
+                <input type="file" id="sample" name="sample" accept="image/*">
+              </div>
+              <div class="form-field">
+                <label for="badge-color">Listing tag colour</label>
+                <input type="color" id="badge-color" name="badge-color" value="#e4a11b">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Confirmation</legend>
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label><input type="checkbox" id="terms" name="terms" required> I confirm the information above is accurate and I agree to the <a href="#">community guidelines</a>. *</label>
+              <span class="error-text" id="err-terms"></span>
+            </div>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit listing</button>
+            <button type="reset" class="btn-reset">Clear form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h2>HustleHub</h2>
+        <p>A digital noticeboard connecting Strathmore students who have a skill to sell with students who need it.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Marketplace</a></li>
+          <li><a href="register.html">Post a Hustle</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Strathmore University<br>
+          Ole Sangale Road, Madaraka<br>
+          Nairobi, Kenya<br>
+          <a href="mailto:hello@hustlehub.example">hello@hustlehub.example</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Follow</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">X (Twitter)</a></li>
+          <li><a href="#">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-bottom container"><small>&copy; <time datetime="2026">2026</time> HustleHub. A student project for the Web Development module.</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
